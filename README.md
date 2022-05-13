@@ -20,7 +20,7 @@
 <div align="center">
   <img src="https://drive.google.com/uc?export=view&id=1uh11jOUhul6ZCZjakydjvDK0eiwJqwrq" width="500" height="200">
   <h1 align="center">Tesla Stock Price Prediction using Rolling Regression and Prophet</h1>
-  <p>In this project, different methods were used to predict stock price of Tesla. We demonstrate models from the oldest polynomial regression model to the modern forecasting model, Prophet, published by Meta here. Furthermore, we can compare both models and dig into them.</p>
+  <p>Everybody knows that stock is extremely hard to predict, especially TESLA. (You know, Elon Musk somehow control the stock market...) Nevertheless, modern machine learning model had been built, with better architecture. Therefore, this method is conduct in order to follow up some new technology and pratice.</p>
 </div>
 
 
@@ -54,9 +54,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project was inspired by a [Kaggle competition](https://www.kaggle.com/competitions/uw-madison-gi-tract-image-segmentation). Briefly, we want to create a model that can automatically segment the stomach and intestines on MRI scans. A method to segment the stomach and intestines would make treatments much faster and would allow more patients to get more effective treatment. 
-
-Please check out the Kaggle competition page if you need more information!
+In this project, different methods were used to predict stock price of Tesla. We demonstrate models from the oldest polynomial regression model to the modern forecasting model, Prophet, published by Meta here. Furthermore, we can compare both models and dig into them.
 
 
 
@@ -66,7 +64,6 @@ This is major frameworks/libraries used in this project.
 
 * Python
 * Jupyter
-* Pytorch
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -75,23 +72,44 @@ This is major frameworks/libraries used in this project.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-You can just follow the steps in the notebook to install and get started.
-
-### Prerequisites
-
-Go to [Weights & Biases](https://wandb.ai/site) to sign up an account if you want to use MLOps to track your experiments.
+Please follow the instruction below to set up your environment.
 
 ### Installation
 
 
 1. Install packages
-   ```sh
-   pip install -q segmentation_models_pytorch
-   pip install -qU wandb
-   pip install -q scikit-learn==1.0
-   ```
+
+  * **Prophet**
+   
+    <img src="https://drive.google.com/uc?export=view&id=1AWWKKGCV3fqEv7yqqv7N7WK0-ZugDm7A" alt='https://facebook.github.io/prophet/' width="300" height="100">
+    
+    > Prophet is an open-source library developed by Facebook and designed for automatic forecasting of univariate time series data.
+    
+    You can just use `pip` to install Prophet. However, you should install `PyStan` first.
+    
+    ```bash
+    pip install pystan==2.19.1.1
+    pip install prophet
+    ```
+     
+    For more installation detail, please check out [PROPHET](https://facebook.github.io/prophet/docs/installation.html#installation-in-python) official website.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+  * **Yahoo! Finance's API**
+    
+    > It's an open-source tool that uses Yahoo's publicly available APIs, and is intended for research and educational purposes.
+    
+    ```bash
+    pip install yfinance
+    ```
+    
+    Quick start to fatch stock data:
+    
+    ```python
+    import yfinance as yf
+    data = yf.download("SPY AAPL", start="2017-01-01", end="2017-04-30")
+    ```
 
 
 
@@ -104,28 +122,13 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 ## References
-```sh
-@article{ANAYAISAZA2021100723,
-title = {An overview of deep learning in medical imaging},
-journal = {Informatics in Medicine Unlocked},
-volume = {26},
-pages = {100723},
-year = {2021},
-issn = {2352-9148},
-doi = {https://doi.org/10.1016/j.imu.2021.100723},
-url = {https://www.sciencedirect.com/science/article/pii/S2352914821002033},
-author = {Andrés Anaya-Isaza and Leonel Mera-Jiménez and Martha Zequera-Diaz}
-}
-```
-```sh
-@InProceedings{10.1007/978-3-319-24574-4_28,
-author="Ronneberger, Olaf and Fischer, Philipp and Brox, Thomas",
-title="U-Net: Convolutional Networks for Biomedical Image Segmentation",
-booktitle="Medical Image Computing and Computer-Assisted Intervention -- MICCAI 2015",
-year="2015",
-publisher="Springer International Publishing",
-address="Cham",
-pages="234--241",
+```bash
+@article{prophet,
+author = {Taylor SJ, Letham B.}
+title = {Forecasting at scale},
+journal = {PeerJ Preprints},
+year = {2017},
+doi = {https://doi.org/10.7287/peerj.preprints.3190v2},
 }
 ```
 
@@ -133,9 +136,8 @@ pages="234--241",
 ## Acknowledgments
 
 These resources are which I would like to give credit to.
-* [Pytorch AMP](https://pytorch.org/docs/stable/amp.html)
-* [Pytorch Scheduler](https://www.kaggle.com/code/isbhargav/guide-to-pytorch-learning-rate-scheduling/notebook)
-* [UWMGI: Unet](https://www.kaggle.com/code/awsaf49/uwmgi-unet-train-pytorch)
+* [Time Series Forecasting With Prophet in Python](https://machinelearningmastery.com/time-series-forecasting-with-prophet-in-python/)
+* [Free Stock Data for Python Using Yahoo Finance API](https://towardsdatascience.com/free-stock-data-for-python-using-yahoo-finance-api-9dafd96cad2e)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
