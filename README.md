@@ -157,4 +157,4 @@ These resources are which I would like to give credit to.
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/ning-yu-kao/Med_scan_img_seg_unet/blob/main/LICENSE
+[license-url]: https://github.com/ning-yu-kao/Tesla_stock_prediction/blob/main/LICENSE
